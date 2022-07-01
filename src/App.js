@@ -7,9 +7,9 @@ function App() {
   return (
     <div className="App">
       <header>
-        <nav>  <h1> Digi Neck </h1>
-        <NavBar nombre="Productos" nombre2="Carrito" />
-        <NavBar nombre="Quienes somos" nombre2="Contacto" />
+        <nav>  <h1> </h1>
+        <NavBar nombre="Productos" nombre2="Carrito" nombre3="Quienes somos" nombre4="Contacto" />
+      
       <hr></hr>
 
         </nav>
