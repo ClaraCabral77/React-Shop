@@ -1,11 +1,14 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import Icono from "./CardWidget";
+import {Icono2} from "./CardWidget";
 
 
 const NavBar= (props) =>{
     return (
     <>
+
 <nav className="navbar navbar-expand-lg bg-dark">
+<Icono />
   <div className="container-fluid">
     <a className="navbar-brand text-light" href="#">Digi Neck</a>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -20,6 +23,7 @@ const NavBar= (props) =>{
       </div>
     </div>
   </div>
+  <Icono2 />
 </nav>
 
 

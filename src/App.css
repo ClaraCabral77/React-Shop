@@ -1,4 +1,12 @@
-.list{
-  display: flex;
-  flex-direction: row;
+.bi-cart-check{
+    color: white;
+}
+
+.bi-gem{
+color:white;
+}
+
+.saludo1{
+    margin-left: 45%;
+    margin-top: 3%;
 }
