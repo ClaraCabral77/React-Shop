@@ -1,5 +1,6 @@
-import { Button } from "bootstrap";
+
 import React, {useState} from "react";
+
 //let rates= 0;
 const ItemCount= (props) =>{
 
@@ -35,6 +36,7 @@ const handleClick=() =>{
 
 
     <p>{ stock ? "" : alert("Ha alcanzado el máximo de stock")}</p>
+
   
     </div>
   

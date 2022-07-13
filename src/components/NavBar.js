@@ -10,7 +10,7 @@ const NavBar= (props) =>{
 <nav className="navbar navbar-expand-lg bg-dark">
 <Icono />
   <div className="container-fluid">
-    <a className="navbar-brand text-light" href="#">Digi Neck</a>
+    <a className="navbar-brand text-light" href="#">Macarrones Heak</a>
   
     <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div className="navbar-nav">
