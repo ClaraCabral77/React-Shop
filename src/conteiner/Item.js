@@ -48,10 +48,7 @@ export const Item = ({producto}) => {
     </div>
   </div>
 </div>
-    <div className="tarjetas"> 
-    <div className="tarjeta">{producto.nombre}</div>
- 
-    </div>
+   
     </>
   )
 }
