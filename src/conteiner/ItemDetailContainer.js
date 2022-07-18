@@ -17,7 +17,7 @@ const fetchProducts = (time, task) =>{
     return new Promise((resolve, reject) =>{
         if (okey){
             setTimeout(()=>{
-                resolve(products)
+                resolve(task)
             }, time);
         } else{
             reject("error")

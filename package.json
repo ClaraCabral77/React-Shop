@@ -8,11 +8,17 @@
     "@testing-library/user-event": "^13.5.0",
     "bootstrap": "^5.2.0-beta1",
     "bootstrap-icons": "^1.8.3",
+    "bundle-stats-webpack-plugin": "^4.0.0",
     "react": "^18.2.0",
     "react-bootstrap": "^2.4.0",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-middleware": "^5.3.3",
+    "webpack-dev-server": "^4.9.3",
+    "webpack-merge": "^5.8.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -37,5 +43,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "ts-loader": "^9.3.1"
   }
 }

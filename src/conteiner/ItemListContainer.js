@@ -1,5 +1,5 @@
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import ItemList from "./ItemList"
 import {products} from "./products"
 
@@ -24,11 +24,11 @@ const fetchProducts = (time, task) =>{
     });
   }
   
-  
+  useEffect(()=> {
   fetchProducts(2000)
     .then(datos =>{setProductList(datos)})
     .catch(err =>{console.log(err)})
-  
+  }, []);
   
 
   return (

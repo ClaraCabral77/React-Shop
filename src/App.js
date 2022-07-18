@@ -3,6 +3,8 @@ import './App.css';
 import NavBar from "./components/NavBar";
 import ItemDetailContaier from './conteiner/ItemDetailContainer';
 import Greeting from "./conteiner/ItemListContainer";
+import {BrowserRouter, Routes, Route} from "react-router-dom";
+import ItemListContainer from "./conteiner/ItemListContainer";
 
 
 
@@ -10,23 +12,25 @@ import Greeting from "./conteiner/ItemListContainer";
 function App() {
   return (
     <div className="App">
-      <header>
+      <BrowserRouter>
         <nav>  <h1> </h1>
         <NavBar nombre="Productos" nombre2="Carrito" nombre3="Quienes somos" nombre4="Contacto" />
+      <Routes>
+          <Route path="/" element={<ItemListContainer/>}/>
+          <Route path="/category/:id" element={<ItemListContainer/>}/>
+          <Route path="/item/:id" element={<ItemDetailContaier/>}/>
+
+      </Routes>
         
         </nav> 
-        </header>
+        </BrowserRouter>
+
        
         <div>
         
-        
         {/*<Greeting saludo="¡Bienvenidxs!"/>*/}
 
-        <ItemDetailContaier/>
-        
-        
-        
-   
+        <ItemDetailContaier />
         
         </div>
       
