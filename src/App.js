@@ -1,9 +1,8 @@
 
 import './App.css';
 import NavBar from "./components/NavBar";
+import ItemDetailContaier from './conteiner/ItemDetailContainer';
 import Greeting from "./conteiner/ItemListContainer";
-
-
 
 
 
@@ -19,7 +18,11 @@ function App() {
         </header>
        
         <div>
-        <Greeting saludo="¡Bienvenidxs!"/>
+        
+        
+        {/*<Greeting saludo="¡Bienvenidxs!"/>*/}
+
+        <ItemDetailContaier/>
         
         
         
