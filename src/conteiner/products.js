@@ -6,7 +6,7 @@ export const products = [{
     nombre:"Macarrones Haek",
     precio:"$23",
     descripcion: "This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action",
-    "imagen": "foto1",
+    imagen: "foto1",
     stock: 20
 
 },
@@ -15,7 +15,7 @@ export const products = [{
     nombre:"Macarrones Ted",
     precio:"$35",
     descripcion: "This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action",
-    "imagen": "." ,
+    imagen: "." ,
     stock: 6
 },
 {

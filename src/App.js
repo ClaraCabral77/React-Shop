@@ -7,8 +7,6 @@ import {BrowserRouter, Routes, Route} from "react-router-dom";
 import ItemListContainer from "./conteiner/ItemListContainer";
 
 
-
-
 function App() {
   return (
     <div className="App">
