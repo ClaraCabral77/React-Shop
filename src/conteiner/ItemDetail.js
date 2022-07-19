@@ -9,9 +9,7 @@ export const ItemDetail = ({ item }) => {
   return (
     <>
    {
- 
-    <ItemDetailContaier>
- 
+      <div className="detailcard">
       <div className="row row-cols-1 row-cols-md-3 g-4">
     <div className="col">
       <div className="card h-100">
@@ -23,15 +21,25 @@ export const ItemDetail = ({ item }) => {
         </div>
         <div className="card-footer">
           <small className="text-muted"><ItemCount/></small>
-          
+          </div>
         </div>
       </div>
-    </div>
-    </div>
-    
-    </ItemDetailContaier>
+      <div className="agregado"> 
+      <div className="card-body">
+          <h5 className="card-title">{item.nombre}</h5>
+          <p className="card-text">{item.precio}/ caja </p>
+          <p className="card-text">Los macarrones Ted vienen por unidades únicamente de 6 alfajores por caja.Lorem This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action,
+</p>   <button type="button" class="btn btn-warning btn-lg">Comprar</button>
+      </div></div>
    
+    </div>
+ 
+    </div>
+  
    }
+
+
    </>
   )
     }
+

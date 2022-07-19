@@ -39,8 +39,20 @@ color:white;
 
 .col{
     margin-bottom:50px;
+
+}
+.detailcard{
+    margin-left: 24%;
+    margin-top: 5%;
 }
 
+.agregado{
+   
+    padding-top: 10%;
+   
+}
 
-
-
+div.App{
+    background-color: #cdc1ff;
+    background-image: linear-gradient(316deg, #cdc1ff 0%, #e5d9f2 74%);
+}
