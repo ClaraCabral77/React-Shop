@@ -29,7 +29,7 @@ export const ItemDetail = ({ item }) => {
           <h5 className="card-title">{item.nombre}</h5>
           <p className="card-text">{item.precio}/ caja </p>
           <p className="card-text">Los macarrones Ted vienen por unidades únicamente de 6 alfajores por caja.Lorem This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action,
-</p>   <button type="button" class="btn btn-warning btn-lg">Comprar</button>
+</p>   <button type="button" className="btn btn-warning btn-lg">Comprar</button>
       </div></div>
    
     </div>

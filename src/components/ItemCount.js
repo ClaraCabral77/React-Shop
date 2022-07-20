@@ -32,6 +32,7 @@ const handleClick=() =>{
       
          +
     </button> 
+    <button className="botonCarrito" type="submit">Add to cart</button>
     
 
 
