@@ -42,6 +42,7 @@ color:white;
 
 }
 .detailcard{
+    width: 100%;
     margin-left: 24%;
     margin-top: 5%;
 }
@@ -140,4 +141,10 @@ div.App{
 .bg-dark{
     background-color: #e056fd;
     background-image: linear-gradient(315deg, #e056fd 0%, #000000 74%);
+}
+
+.flexbox{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction:row;
 }

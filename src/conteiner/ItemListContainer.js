@@ -3,6 +3,7 @@ import { useState, useEffect } from "react"
 import ItemList from "./ItemList"
 import {products} from "./products"
 import {useParams} from "react-router"
+import ItemCount from "../components/ItemCount"
 
 
 function Greeting(props) {
@@ -41,11 +42,14 @@ const fetchProducts = (time, task) =>{
   
   }, [id]);
   
+  const onAdd= (param) => {console.log(`La cantidad comprada es${param}`)}
 
   return (
     <>
     <div className="saludo1">{props.saludo}</div>
     <ItemList items={productList}/>
+    
+   
 </>
 
   );

@@ -5,8 +5,14 @@ import ItemDetailContaier from './ItemDetailContainer'
 
 
 
+
 export const ItemDetail = ({ item }) => {
-  return (
+
+  
+  const onAdd = (param) =>{ 
+    console.log ('Compraste '+(param)+ ' unidades');
+  }
+    return (
     <>
    {
       <div className="detailcard">
@@ -20,7 +26,7 @@ export const ItemDetail = ({ item }) => {
           <p className="card-text">{item.descripcion}</p>
         </div>
         <div className="card-footer">
-          <small className="text-muted"><ItemCount/></small>
+          <small className="text-muted"> <ItemCount initial={1} stock={20} onAdd={onAdd} /></small>
           </div>
         </div>
       </div>
@@ -42,4 +48,3 @@ export const ItemDetail = ({ item }) => {
    </>
   )
     }
-

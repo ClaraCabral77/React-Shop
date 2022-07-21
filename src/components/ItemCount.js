@@ -2,53 +2,33 @@
 import React, {useState} from "react";
 
 //let rates= 0;
-const ItemCount= (props) =>{
+const ItemCount = ( {initial, stock, onAdd} ) => {
 
+  const [counter, setCounter] = useState(initial);
 
-
-const [rates, setRates] = useState(1) 
-
-const stock= rates <= 5;
-
-const handleClickPositivo=() =>{
- 
-  setRates(rates + 1)
-}
-
-const handleClick=() =>{
- 
-      setRates(rates - 1)
+  const inc = () =>{
+      if(counter < stock ){
+          const aux = counter+1
+          setCounter(aux);
   }
-    return (
-
-    <div className= "seccionContador">
-      
-    <button className="botonesContador" onClick={handleClick}>
-         -
-    </button> {rates}
-
-
-    <button className="botonesContador" onClick={handleClickPositivo}>
-      
-         +
-    </button> 
-    <button className="botonCarrito" type="submit">Add to cart</button>
-    
-
-
-    <p>{ stock ? "" : alert("Ha alcanzado el máximo de stock")}</p>
-
-  
-    </div>
-    
-   
-    
-      )
-
-  ;
-
 }
-
+  const dec = () =>{
+      if(counter > initial ){
+          const aux = counter-1
+          setCounter(aux);
+  }
+}
+return (
+  <div className="seccionContador" >
+      <div className="counter">
+          <button className="botonesContador" onClick={dec}>-</button>
+          <span >{counter}</span>
+          <button className="botonesContador"  onClick={inc}>+</button>
+      </div>
+      <button className="botonCarrito" onClick={()=>onAdd(counter)}>Add to cart</button>
+  </div>
+  )
+}
   
 
  export default ItemCount;

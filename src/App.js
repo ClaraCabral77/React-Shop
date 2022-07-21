@@ -20,7 +20,6 @@ function App() {
           <Route path="/category/:id" element={<ItemListContainer/>}/>
           <Route path="/item/:id" element={<ItemDetailContaier/>}/>
 
-      
         </Routes>
         
         
@@ -31,7 +30,7 @@ function App() {
         
         {/*<Greeting saludo="¡Bienvenidxs!"/>*/}
 
-        <ItemDetailContaier />
+        
         
         </div>
       
