@@ -13,7 +13,7 @@ function App() {
       
       
         <nav>  <h1> </h1>
-        <NavBar nombre="Cajas por 6" nombre2="Cajas por 12" nombre3="Por Unidades" nombre4="Regalos" />
+        <NavBar nombre="Cajas por 6" nombre2="Cajas por 12" nombre3="Por Unidades" nombre4="Detalle" />
     
         <Routes>
           <Route path="/" element={<ItemListContainer/>}/>
@@ -30,6 +30,7 @@ function App() {
         
         {/*<Greeting saludo="¡Bienvenidxs!"/>*/}
 
+    
         
         
         </div>

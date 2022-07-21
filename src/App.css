@@ -136,6 +136,7 @@ div.App{
     justify-items:flex-end;
     margin-left: 50px;
     margin-right: 50px;
+   
 }
 
 .bg-dark{
@@ -144,7 +145,7 @@ div.App{
 }
 
 .flexbox{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction:row;
+    display: grid;
+    grid-template-columns: 50% 50%;
+
 }

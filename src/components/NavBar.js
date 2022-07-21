@@ -18,7 +18,7 @@ const NavBar= (props) =>{
         <Link to="/category/2" className="categorias" aria-current="page" href="#">{props.nombre}</Link>
         <Link to="/category/6" className="categorias" href="#">{props.nombre2}</Link>
         <Link to="/category/1" className="categorias" href="#">{props.nombre3}</Link>
-        <Link to="/category/4" className="categorias" href="#">{props.nombre4}</Link>
+        <Link to="/item/1" className="categorias" href="#">{props.nombre4}</Link>
       </div>
     </div>
   </div>
