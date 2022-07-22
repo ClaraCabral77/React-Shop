@@ -25,7 +25,12 @@ return (
           <span >{counter}</span>
           <button className="botonesContador"  onClick={inc}>+</button>
       </div>
-      <button className="botonCarrito" onClick={()=>onAdd(counter)}>Add to cart</button>
+      {
+        stock && counter
+        ? <button className="botonCarrito" onClick={()=>onAdd(counter)}>Add to cart</button>
+        :<button type="button" className="desabilitado"disabled >Add to cart</button>
+        }
+      
   </div>
   )
 }

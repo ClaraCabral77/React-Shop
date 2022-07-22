@@ -1,6 +1,9 @@
 import React from 'react'
 import ItemCount from '../components/ItemCount'
 import ItemDetailContaier from './ItemDetailContainer'
+import {useState} from "react"
+import {Link} from "react-router-dom"
+
 
 
 
@@ -8,9 +11,11 @@ import ItemDetailContaier from './ItemDetailContainer'
 
 export const ItemDetail = ({ item }) => {
 
+  const[itemCount, setItemCount] = useState(0);
   
   const onAdd = (param) =>{ 
     console.log ('Compraste '+(param)+ ' unidades');
+    setItemCount(param);
   }
     return (
     <>
@@ -26,7 +31,10 @@ export const ItemDetail = ({ item }) => {
           <p className="card-text">{item.descripcion}</p>
         </div>
         <div className="card-footer">
-          <small className="text-muted"> <ItemCount initial={1} stock={20} onAdd={onAdd} /></small>
+          <small className="text-muted"> 
+       
+
+</small>
           </div>
         </div>
       </div>
@@ -35,7 +43,11 @@ export const ItemDetail = ({ item }) => {
           <h5 className="card-title">{item.nombre}</h5>
           <p className="card-text">{item.precio}/ caja </p>
           <p className="card-text">Los macarrones Ted vienen por unidades únicamente de 6 alfajores por caja.Lorem This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action,
-</p>   <button type="button" className="btn btn-warning btn-lg">Comprar</button>
+</p>     {
+  itemCount === 0
+  ? <ItemCount stock={item.stock} initial={itemCount} onAdd={onAdd}/>
+  :<Link to="/Cart" style={{textDecoration: "none"}}><button className="botonCarrito">Checkout</button></Link>
+}
       </div></div>
    
     </div>

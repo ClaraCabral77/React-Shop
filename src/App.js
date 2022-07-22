@@ -5,6 +5,7 @@ import ItemDetailContaier from './conteiner/ItemDetailContainer';
 import Greeting from "./conteiner/ItemListContainer";
 import { Routes, Route} from "react-router-dom";
 import ItemListContainer from "./conteiner/ItemListContainer";
+import Cart from "./components/Cart"
 
 
 function App() {
@@ -16,9 +17,10 @@ function App() {
         <NavBar nombre="Cajas por 6" nombre2="Cajas por 12" nombre3="Por Unidades" nombre4="Detalle" />
     
         <Routes>
-          <Route path="/" element={<ItemListContainer/>}/>
+        
           <Route path="/category/:id" element={<ItemListContainer/>}/>
           <Route path="/item/:id" element={<ItemDetailContaier/>}/>
+          <Route path="/Cart" element={<Cart/>}/>
 
         </Routes>
         
@@ -26,12 +28,11 @@ function App() {
         </nav> 
       
 
-        <div>
+        <div className="flexbox">
         
-        {/*<Greeting saludo="¡Bienvenidxs!"/>*/}
-
-    
-        
+      <Routes>
+        <Route path="/" element={<ItemListContainer/>}/>
+        </Routes>
         
         </div>
       

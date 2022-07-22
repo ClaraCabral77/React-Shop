@@ -47,5 +47,15 @@ descripcion: "This is a wider card with supporting text below as a natural lead-
 imagen: "https://images.unsplash.com/photo-1612198791362-c996ceb686b1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80",
 stock: 20,
 categoryId: 1
+},
+{
+
+    id: 6,
+nombre:"Macarrones Grim",
+precio:"380",
+descripcion: "This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action",
+imagen: "https://images.unsplash.com/photo-1612198791362-c996ceb686b1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80",
+stock: 20,
+categoryId: 6
 }
 ]

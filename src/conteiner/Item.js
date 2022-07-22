@@ -12,7 +12,7 @@ export const Item = ({producto}) => {
     
   }
   return (
-<div class="flexbox">
+<div class="">
   
     <div class="card h-100">
     <img className="imagenes"src={producto.imagen}></img>

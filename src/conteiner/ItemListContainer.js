@@ -46,7 +46,7 @@ const fetchProducts = (time, task) =>{
 
   return (
     <>
-    <div className="saludo1">{props.saludo}</div>
+    
     <ItemList items={productList}/>
     
    
