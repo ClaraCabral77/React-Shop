@@ -147,15 +147,14 @@ div.App{
 
 div.flexbox{
     width: 110%;
-
     margin-top: 5%;
     padding-bottom: 20px;
     display: grid;
     grid-template-columns: 30% 30% 30%;
     
-    
-
 }
+
+
 
 .desabilitado{
     width: 50%;

@@ -12,8 +12,7 @@ export const Item = ({producto}) => {
     
   }
   return (
-<div class="">
-  
+<div class="itemStyle">
     <div class="card h-100">
     <img className="imagenes"src={producto.imagen}></img>
       <div className="card-body">
