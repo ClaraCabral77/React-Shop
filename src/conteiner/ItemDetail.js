@@ -30,23 +30,19 @@ export const ItemDetail = ({ item }) => {
           <p className="card-text">{item.precio}</p>
           <p className="card-text">{item.descripcion}</p>
         </div>
-        <div className="card-footer">
-          <small className="text-muted"> 
-       
-
-</small>
-          </div>
+        
         </div>
       </div>
       <div className="agregado"> 
       <div className="card-body">
+      
           <h5 className="card-title">{item.nombre}</h5>
           <p className="card-text">{item.precio}/ caja </p>
-          <p className="card-text">Los macarrones Ted vienen por unidades únicamente de 6 alfajores por caja.Lorem This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action,
+          <p className="card-text">Los {item.nombre} vienen por unidades de 6 alfajores por caja.Lorem This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action,
 </p>     {
   itemCount === 0
   ? <ItemCount stock={item.stock} initial={itemCount} onAdd={onAdd}/>
-  :<Link to="/Cart" style={{textDecoration: "none"}}><button className="botonCarrito">Checkout</button></Link>
+  :<Link to="/Cart" style={{textDecoration: "none"}}><button className="botonCheck">Checkout</button></Link>
 }
       </div></div>
    

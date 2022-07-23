@@ -22,7 +22,7 @@ return (
   <div className="seccionContador" >
       <div className="counter">
           <button className="botonesContador" onClick={dec}>-</button>
-          <span >{counter}</span>
+          <span className="numeroContador">{counter}</span>
           <button className="botonesContador"  onClick={inc}>+</button>
       </div>
       {
