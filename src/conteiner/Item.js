@@ -22,7 +22,7 @@ export const Item = ({producto}) => {
         <p className="card-text">{producto.descripcion}</p>
       </div>
       <div className="card-footer">
-      <Link to={`/item/${producto.id}`}><button  className="btn btn-secondary" >Ver más</button></Link>
+      <Link to={`/item/${producto.id}`}><button  className="btn btn-warning" >Ver más</button></Link>
       
     </div>
   

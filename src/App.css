@@ -86,6 +86,7 @@ div.App{
 .card-title{
     padding: 10px;
     display: inline;
+    margin-left: -10px;
    
     
 }
@@ -163,5 +164,8 @@ div.flexbox{
    margin-left: 30px;
 }
 
-
+.btn-warning{
+    margin-left: 68%;
+    margin-top: 5%;
+}
  
