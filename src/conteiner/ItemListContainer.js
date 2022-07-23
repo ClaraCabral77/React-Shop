@@ -9,7 +9,7 @@ import ItemCount from "../components/ItemCount"
 function Greeting(props) {
 
 
-const [productList, setProductList] = useState([])
+const [data, setProductList] = useState([])
 const { id }= useParams();
 
 let okey = true
@@ -47,7 +47,7 @@ const fetchProducts = (time, task) =>{
   return (
     <>
     
-    <ItemList items={productList}/>
+    <ItemList items={data}/>
     
    
 </>

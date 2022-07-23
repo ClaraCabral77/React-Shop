@@ -24,7 +24,7 @@ export const products = [{
 {
 id: 3,
 nombre:"Macarrones Mert",
-precio:"65",
+precio:"$65",
 descripcion: "This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action",
 imagen: "https://images.unsplash.com/photo-1528967425505-cf579e5792d0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
 stock: 20,
@@ -33,7 +33,7 @@ categoryId: 2 ,
 {
 id: 4,
 nombre:"Macarrones Poth",
-precio:"48",
+precio:"$48",
 descripcion: "This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action",
 imagen: "https://images.unsplash.com/photo-1528919460073-af8ef5efad10?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=949&q=80",
 stock: 20,
@@ -42,7 +42,7 @@ categoryId: 2,},
 
     id: 5,
 nombre:"Macarrones Poth",
-precio:"653",
+precio:"$653",
 descripcion: "This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action",
 imagen: "https://images.unsplash.com/photo-1612198791362-c996ceb686b1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80",
 stock: 20,
@@ -52,9 +52,9 @@ categoryId: 1
 
     id: 6,
 nombre:"Macarrones Grim",
-precio:"380",
+precio:"$380",
 descripcion: "This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action",
-imagen: "https://images.unsplash.com/photo-1612198791362-c996ceb686b1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80",
+imagen: "https://images.unsplash.com/photo-1559716433-057855e8b527?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDJ8fHN3ZWV0JTIwbWFjYXJvb25zfGVufDB8MHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
 stock: 20,
 categoryId: 6
 }

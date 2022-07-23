@@ -16,9 +16,9 @@ function App() {
         <nav>  <h1> </h1>
         <NavBar nombre="Cajas por 6" nombre2="Cajas por 12" nombre3="Por Unidades" nombre4="Detalle" />
     <Routes>
-        <Route path="/item/:id" element={<ItemDetailContaier/>}/>
+        <Route path="/item/:detalle" element={<ItemDetailContaier/>}/>
           <Route path="/Cart" element={<Cart/>}/>
-          </Routes>
+     </Routes>
         
         </nav> 
       
