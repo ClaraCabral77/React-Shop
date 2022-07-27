@@ -194,3 +194,47 @@ div.flexbox{
 .numeroContador{
     padding: 10px;
 }
+
+.agregadoFinal{
+    height: 431px;
+    background-color: blueviolet;
+    padding-top: 10%;
+   
+}
+.delete{ 
+
+    width: 20%;
+    border-style: none;
+    background-color: rgb(65, 6, 65);
+    border-radius: 15px 10px;
+    color:white;
+   margin-left: 10px;
+}
+
+.deleteAll{
+    width: 15%;
+    border-style: none;
+    background-color: rgb(65, 6, 65);
+    border-radius: 15px 10px;
+    color:white;
+   margin-left: 78%;
+   margin-top: 50px;
+   margin-bottom: -50px;
+
+}
+.tituloCarrito{
+    margin-left: 42%;
+    margin-top: 60px;
+}
+
+.card-title-cart{
+color: yellow;
+margin-bottom: 20px;
+padding-bottom: 20px;
+margin-left: 15px;
+margin-top: -15px;
+}
+.card-text-cart{
+    margin-left:30%;
+    color: white;
+}

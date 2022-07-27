@@ -1,8 +1,10 @@
 import React from 'react'
 import ItemCount from '../components/ItemCount'
 import ItemDetailContaier from './ItemDetailContainer'
-import {useState} from "react"
+import {useState, useContext} from "react"
+
 import {Link} from "react-router-dom"
+import { CartContext } from '../components/CartContext'
 
 
 
@@ -12,10 +14,12 @@ import {Link} from "react-router-dom"
 export const ItemDetail = ({ item }) => {
 
   const[itemCount, setItemCount] = useState(0);
+  const test= useContext(CartContext)
   
   const onAdd = (param) =>{ 
     console.log ('Compraste '+(param)+ ' unidades');
     setItemCount(param);
+    test.addToCart(item, param)
   }
     return (
     <>
@@ -39,7 +43,9 @@ export const ItemDetail = ({ item }) => {
           <h5 className="card-title">{item.nombre}</h5>
           <p className="card-text">{item.precio}/ caja </p>
           <p className="card-text">Los {item.nombre} vienen por unidades de 6 alfajores por caja.Lorem This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action,
-</p>     {
+</p>  
+
+   {
   itemCount === 0
   ? <ItemCount stock={item.stock} initial={itemCount} onAdd={onAdd}/>
   :<Link to="/Cart" style={{textDecoration: "none"}}><button className="botonCheck">Checkout</button></Link>
