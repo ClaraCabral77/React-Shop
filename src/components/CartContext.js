@@ -36,14 +36,21 @@ setCartList([]);
 }
 
 const numeroWidget= ()=>{
-     for(var i=0; i < cartList.length; i++){
-
-     }
+    
+}
+    
    
+
+const totalPrice=()=>{
+    let cantidad= cartList.map(item => item.cantidad);
+    return cantidad.reduce(((prev, actual) => prev + actual.cantidad * parseInt(actual.precio)), 0)
+}
+const totalProducts=()=>{
+    return cartList.reduce((acumulador, productoActual )=> acumulador + productoActual.cantidad, 0)
 }
 
     return(
-<CartContext.Provider value={{cartList, addToCart, removeItem, clear, isInCart, numeroWidget,}}>
+<CartContext.Provider value={{cartList, addToCart, removeItem, clear, isInCart, numeroWidget, totalPrice, totalProducts}}>
 { children }
 </CartContext.Provider >
 
