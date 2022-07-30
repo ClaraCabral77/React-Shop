@@ -39,11 +39,10 @@ const numeroWidget= ()=>{
     
 }
     
-   
 
 const totalPrice=()=>{
-    let cantidad= cartList.map(item => item.cantidad);
-    return cantidad.reduce(((prev, actual) => prev + actual.cantidad * parseInt(actual.precio)), 0)
+    
+    return cartList.reduce(((prev, actual) => prev + actual.cantidad * parseInt(actual.precio)), 0)
 }
 const totalProducts=()=>{
     return cartList.reduce((acumulador, productoActual )=> acumulador + productoActual.cantidad, 0)

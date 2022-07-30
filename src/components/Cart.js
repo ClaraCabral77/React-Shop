@@ -51,8 +51,20 @@ console.log(test.totalPrice())
           <h5 className="card-title-cart">{item.nombre}</h5>
           <p className="card-text-cart">Los {item.nombre} vienen pction</p>
           <p className="card-text-cart">{item.cantidad} cajas</p>
-          <p className="card-text-cart">Precio final es de : {test.totalPrice()}  </p>
+          <p className="card-text-cart">Precio: {item.precio}  </p>
           <button className="delete"onClick={() => test.removeItem(item.id)}> Delete </button>
+
+        
+</div>
+</div>
+
+<div className="agregadoFinal2"> 
+      <div className="card-body">
+      
+          <h5 className="card-title-cart2">{item.nombre}</h5>
+         
+          <p className="card-text-cart2">Precio final es de : {test.totalPrice()}  </p>
+          <button className="delete"> Comprar </button>
 
         
 </div>

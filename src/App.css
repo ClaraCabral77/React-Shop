@@ -47,7 +47,7 @@ color:white;
 .detailcard{
     width: 100%;
     
-    margin-left: 15%;
+    margin-left: 5%;
     margin-top: 10%;
     
   
@@ -238,3 +238,21 @@ margin-top: -15px;
     margin-left:30%;
     color: white;
 }
+.agregadoFinal2{
+    height: 200px;
+    background-color: rgb(156, 226, 43);
+    padding-top: 10%;
+   
+}
+
+.card-title-cart2{
+    color: rgb(102, 10, 90);
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    margin-left: 15px;
+    margin-top: -90px;
+    }
+    .card-text-cart2{
+        margin-left:30%;
+        color: rgb(112, 13, 87);
+    }
