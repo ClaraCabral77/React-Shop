@@ -5,6 +5,8 @@ import {useState, useContext} from "react"
 
 import {Link} from "react-router-dom"
 import { CartContext } from '../components/CartContext'
+import {db} from "../utils/FirebaseConfig"
+import { collection, getDocs } from "firebase/firestore";
 
 
 
@@ -21,6 +23,11 @@ export const ItemDetail = ({ item }) => {
     setItemCount(param);
     test.addToCart(item, param)
   }
+
+
+
+
+
     return (
     <>
    {

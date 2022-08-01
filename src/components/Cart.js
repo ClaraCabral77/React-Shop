@@ -51,29 +51,19 @@ console.log(test.totalPrice())
           <h5 className="card-title-cart">{item.nombre}</h5>
           <p className="card-text-cart">Los {item.nombre} vienen pction</p>
           <p className="card-text-cart">{item.cantidad} cajas</p>
-          <p className="card-text-cart">Precio: {item.precio}  </p>
+          <p className="card-text-cart">Precio: ${test.subtotal(item.cantidad, item.precio)}  </p>
           <button className="delete"onClick={() => test.removeItem(item.id)}> Delete </button>
 
         
 </div>
 </div>
 
-<div className="agregadoFinal2"> 
-      <div className="card-body">
-      
-          <h5 className="card-title-cart2">{item.nombre}</h5>
-         
-          <p className="card-text-cart2">Precio final es de : {test.totalPrice()}  </p>
-          <button className="delete"> Comprar </button>
 
-        
-</div>
-</div>
 </div>
  </div>
  <div>
   
- {test.totalProducts()}
+
  </div>
 
  
@@ -82,6 +72,15 @@ console.log(test.totalPrice())
       ))
       
     }
+    <div className="agregadoFinal2"> 
+      <div className="card-body">
+      <p className="parrafoCheck">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action</p>
+      <p className="card-text-cart2">Precio final es de: ${test.totalPrice()}  </p>
+          <button className="delete2"> Comprar </button>
+
+        
+</div>
+</div>
 
 </>
 

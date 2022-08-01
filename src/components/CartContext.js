@@ -35,9 +35,7 @@ const clear = ()=>{
 setCartList([]);
 }
 
-const numeroWidget= ()=>{
-    
-}
+
     
 
 const totalPrice=()=>{
@@ -48,8 +46,12 @@ const totalProducts=()=>{
     return cartList.reduce((acumulador, productoActual )=> acumulador + productoActual.cantidad, 0)
 }
 
+const subtotal=(cantidad, precio)=>{
+return parseInt(cantidad ) * parseInt(precio)
+}
+
     return(
-<CartContext.Provider value={{cartList, addToCart, removeItem, clear, isInCart, numeroWidget, totalPrice, totalProducts}}>
+<CartContext.Provider value={{cartList, addToCart, removeItem, clear, isInCart, totalPrice, totalProducts, subtotal}}>
 { children }
 </CartContext.Provider >
 
