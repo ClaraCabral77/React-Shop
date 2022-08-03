@@ -26,8 +26,6 @@ export const ItemDetail = ({ item }) => {
 
 
 
-
-
     return (
     <>
    {

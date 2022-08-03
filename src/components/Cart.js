@@ -1,17 +1,65 @@
 import React from 'react'
 import { CartContext } from './CartContext';
 import { useContext } from 'react';
+import { serverTimestamp } from 'firebase/firestore';
+import {query, orderBy, where,collection, getDocs} from "@firebase/firestore";
+import {db} from "../utils/FirebaseConfig"
+import { doc, setDoc, updateDoc, increment} from "firebase/firestore";
 
 
 
 const Cart = () => {
 
   const test= useContext(CartContext);
+
+
+  const createOrder=()=>{
+    let itemsForCart= test.cartList.map(item=> ({
+id: item.id,
+title:item.nombre,
+price: item.precio,
+cantidad: item.cantidad
+    }))
+let order= {
+      buyer:{
+        email: "cabralclara77@gmail.com",
+        name: "Clara",
+        phone: 1156247796,
+},
+    date: serverTimestamp(),
+    item:  itemsForCart,
+    total: test.totalPrice()
+    }
+    
+
+  const createOrderInFirestore= async()=>{
+    const newOrderRef= doc(collection(db, "orders", ))
+    await setDoc(newOrderRef, order)
+    return (newOrderRef)
+  }
+
+  createOrderInFirestore()
+  .then(result => alert("your order has been created. Id=" + result.id ))
+  .catch(err => console.log(err))
+
+
+  test.cartList.forEach(async(item)=>{
+    const itemRef= doc(db, "productos", item.id)
+    await updateDoc(itemRef,{ 
+      stock: increment(-item.cantidad)
+    })
+  })
+
   console.log(test.cartList)
 console.log(test.totalProducts())
 console.log(test.totalPrice())
+
+
+test.clear()
+
+
  
- 
+}
     if(test.cartList.length === 0){
       return(
     <>
@@ -76,7 +124,7 @@ console.log(test.totalPrice())
       <div className="card-body">
       <p className="parrafoCheck">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action</p>
       <p className="card-text-cart2">Precio final es de: ${test.totalPrice()}  </p>
-          <button className="delete2"> Comprar </button>
+          <button onClick={createOrder} className="delete2"> Comprar </button>
 
         
 </div>

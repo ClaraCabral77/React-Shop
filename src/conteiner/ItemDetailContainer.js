@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react'
-import { products } from './products';
+
 import { ItemDetail } from './ItemDetail';
 import { useState} from 'react';
 import { useParams } from 'react-router';
+import { fireStoreFetchOne } from '../utils/fireStoreFetch';
 
 
 
@@ -11,7 +12,7 @@ import { useParams } from 'react-router';
 const ItemDetailContaier= () => {
 
 
-const [Undato, setDato] = useState([]);
+const [Undato, setDato] = useState({});
 const { detalle }= useParams();
 
 
@@ -29,28 +30,38 @@ const fetchProducts = (time, task) =>{
         }
     });
   }
+
+
+  
+  useEffect(()=> {
+  
+
+fireStoreFetchOne(detalle)
+  .then(result => setDato(result))
+   .catch(err => console.log(err))
+     }, []);
     
-   useEffect(()=> {
+ //  useEffect(()=> {
 
- //       const fireStoreFetch= async() =>{
-  //          const querySnapshot = await getDocs(collection(db, "productos"));
-   //         const dataFromFirestore= querySnapshot.docs.map((doc) => ({
-   //           id: doc.id,
-   //          ...doc.data()
+  //      const fireStoreFetch= async() =>{
+ //      const querySnapshot = await getDocs(collection(db, "productos"));
+ //         const dataFromFirestore= querySnapshot.docs.map((doc) => ({
+  //          id: doc.id,
+  //           ...doc.data()
             
- //         }));
-  //        return dataFromFirestore
-  //          }
+    //      }));
+   //       return dataFromFirestore
+     //      }
           
-      //      fireStoreFetch()
-      //      .then(result => setDato(result))
-      //      .catch(err => console.log(err))
-      //      }, [detalle]);
+       //     fireStoreFetch()
+     //       .then(result => setDato(result))
+    //       .catch(err => console.log(err))
+    //      }, [detalle]);
 
-        fetchProducts(2000, products.find((item) => item.id === parseInt(detalle)))
-        .then(datos =>{setDato(datos)})
-        .catch(err =>{console.log(err)})
-    }, [detalle]);
+  //      fetchProducts(2000, products.find((item) => item.id === parseInt(detalle)))
+//        .then(datos =>{setDato(datos)})
+ //       .catch(err =>{console.log(err)})
+//    }, [detalle]);
       
       
      return (

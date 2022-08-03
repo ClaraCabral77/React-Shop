@@ -1,10 +1,8 @@
 
 import { useState, useEffect } from "react"
 import ItemList from "./ItemList"
-import { products } from "./products"
 import {useParams} from "react-router"
-//import {db} from "../utils/FirebaseConfig"
-//import { collection, getDocs } from "firebase/firestore";
+import {fireStoreFetch} from "../utils/fireStoreFetch"
 
 
 
@@ -29,32 +27,24 @@ const fetchProducts = (time, task) =>{
   }
   
     
-  useEffect(()=> {
-    if (id === undefined){
- 
-      fetchProducts(2000, products)
-       .then(datos =>{setProductList(datos)})
-       .catch(err =>{console.log(err)})
- }
-    else{
-     fetchProducts(2000, products.filter(item => item.categoryId == (id)))
-       .then(datos =>{setProductList(datos)})
-      .catch(err =>{console.log(err)})
- 
-    }
- // const fireStoreFetch= async() =>{
- // const querySnapshot = await getDocs(collection(db, "productos"));
- // const dataFromFirestore= querySnapshot.docs.map((doc) => ({
-//    id: doc.id,
- //  ...doc.data()
   
-//}));
-//return dataFromFirestore
- // }
-
- // fireStoreFetch()
- // .then(result => setProductList(result))
- // .catch(err => console.log(err))
+   // if (id === undefined){
+ 
+   //   fetchProducts(2000, products)
+   //    .then(datos =>{setProductList(datos)})
+  //     .catch(err =>{console.log(err)})
+ //}
+  //  else{
+   //  fetchProducts(2000, products.filter(item => item.categoryId == (id)))
+    //   .then(datos =>{setProductList(datos)})
+   //   .catch(err =>{console.log(err)})
+ 
+  //  }
+  
+  useEffect(()=> {
+ fireStoreFetch(id)
+  .then(result => setProductList(result))
+  .catch(err => console.log(err))
  }, [id]);
   
   const onAdd= (param) => {console.log(`La cantidad comprada es${param}`)}
