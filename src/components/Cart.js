@@ -2,7 +2,7 @@ import React from 'react'
 import { CartContext } from './CartContext';
 import { useContext } from 'react';
 import { serverTimestamp } from 'firebase/firestore';
-import {query, orderBy, where,collection, getDocs} from "@firebase/firestore";
+import {collection,} from "@firebase/firestore";
 import {db} from "../utils/FirebaseConfig"
 import { doc, setDoc, updateDoc, increment} from "firebase/firestore";
 
@@ -15,15 +15,15 @@ const Cart = () => {
 
   const createOrder=()=>{
     let itemsForCart= test.cartList.map(item=> ({
-id: item.id,
-title:item.nombre,
-price: item.precio,
-cantidad: item.cantidad
+  id: item.id,
+  title:item.nombre,
+  price: item.precio,
+  cantidad: item.cantidad
     }))
 let order= {
       buyer:{
-        email: "cabralclara77@gmail.com",
-        name: "Clara",
+        email: "cabralmaria77@gmail.com",
+        name: "Maria",
         phone: 1156247796,
 },
     date: serverTimestamp(),
@@ -50,9 +50,9 @@ let order= {
     })
   })
 
-  console.log(test.cartList)
-console.log(test.totalProducts())
-console.log(test.totalPrice())
+ // console.log(test.cartList)
+//console.log(test.totalProducts())
+//console.log(test.totalPrice())
 
 
 test.clear()
@@ -81,14 +81,11 @@ test.clear()
       <div className="row row-cols-1 row-cols-md-3 g-4">
     <div className="col">
       <div className="card h-100">
-      <img src={item.imagen}/>
+      <img src={item.imagen}alt="product"/>
         <div className="card-body">
           <h5 className="card-title">{item.nombre}</h5>
           <p className="card-text">Con tu compra slkddl wdknwld dlwdknwldk wdlkwlksm wldknwld wldnwld</p>
-          
-          
-       
-        
+                  
         </div>
         
         </div>
@@ -102,20 +99,13 @@ test.clear()
           <p className="card-text-cart">Precio: ${test.subtotal(item.cantidad, item.precio)}  </p>
           <button className="delete"onClick={() => test.removeItem(item.id)}> Delete </button>
 
-        
 </div>
 </div>
-
-
 </div>
- </div>
+</div>
  <div>
-  
-
- </div>
-
- 
-        </>
+   </div>
+      </>
 
       ))
       
