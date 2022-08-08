@@ -7,6 +7,8 @@ Carrito de compras de macarrones.
 ## Visual
 
 ![Shopping Cart](https://github.com/ClaraCabral77/React-Shop/blob/main/src/assets/imagenes/proyecto.jpg)
+![Shopping Cart](https://github.com/ClaraCabral77/React-Shop/blob/main/src/assets/imagenes/detalle.jpg)
+![Shopping Cart](https://github.com/ClaraCabral77/React-Shop/blob/main/src/assets/imagenes/carrito.jpg)
 
 
 ## About the project
