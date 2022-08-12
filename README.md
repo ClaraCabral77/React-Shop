@@ -22,7 +22,7 @@ This is a sweet macaroons shopping cart. We can found a product catalog with the
 Each card has his own detail section where you can found a increment and decrement button.
 In te shopping cart section u'll find the total of products added and the final price.
 Also the categories are separated by presentation in boxes of 6 12 or unit
-## Construido con 🛠️
+## Build with 🛠️
 
  - [Html](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
  - [Css](https://github.com/matiassingers/awesome-readme)
